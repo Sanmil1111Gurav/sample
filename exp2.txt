@@ -6,7 +6,6 @@ sudo su
 # git --version
 
 step-2) Customize and configure your Git Account:
-
 # git config --global user.name "your_username"
 # git config --global user.email "your_email@example.com@gmail.com"
 # git config --list
