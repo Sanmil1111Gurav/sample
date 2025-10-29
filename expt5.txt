@@ -1,0 +1,22 @@
+Aim : To create and build a CI/CD pipeline in Jenkins to test and deploy an application over the tomcat server.
+
+1)
+sudo su
+# find / -type f -name java
+
+Go to : Manage Jenkins -> Tools -> JDK installations -> Add JDK
+
+                JDK -> Name = java_home ,  JAVA_HOME = /usr/lib/jvm/java-17-openjdk-amd64/
+                Git -> Name = Default , Path to Git executable = git -> Tick Install automatically
+
+	  Maven installations -> Add Maven -> Maven -> Name = Mavenlatest -> Tick Install automatically 
+
+2)	New Item -> CICD_Pipeline_Demo -> Frestyle Project -> Configure -> Source Code Management -> Git -> Repository URL = https://github.com/Sanmil1111Gurav/hello-world2025.git
+                                                                                                         ( Branch specifier = */master ) ----> not conform  
+
+3)	Build Now -> Console Output
+
+
+4)	CICD Pipeline -> Configure -> Environment -> Add build Step -> Invoke top-level Maven targets -> Maven version -> Mavenlatest -> Goals -> clean compile package
+
+5)	Click on apply -> Save -> Build Now -> Console output
