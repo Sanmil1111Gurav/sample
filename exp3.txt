@@ -1,4 +1,4 @@
-Aim : To understand and perform version control system / source code management using Git.
+Aim : To understand and perform version control system / source code management using Git Branch.
 
 sudo apt update
 sudo su 
