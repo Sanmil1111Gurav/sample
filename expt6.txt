@@ -1,0 +1,38 @@
+Aim : To implement Jenkins Master-Slave Architecture with Scaling.
+
+
+1) 
+Dashboard -> Manage Jenkins -> Nodes -> New Node -> Node Name = agent2 ; Type = Permanent Agent -> create
+
+2) In terminal:
+pwd   ----> copy the path somewhere
+su root
+# find / -type f -name java   ----> at end of output it will show something like "/usr/lib/jvm/java-17-openjdk-amd64/bin/java"
+
+3)
+Dashboard -> Manage Jenkins -> Nodes -> Name = agent2 ; Description = This is a demo on Master-Slave Jenkins ; Number of Executors = 1 ; Remote Root Directory = ( Paste the path in step-2 )
+                                      Labels = agent2 ; Usage = Only build jobs with label expressions matching this node ; Launch method = Launch agent by connecting it to the controller ;
+                                                                                                                           Availability = Keep this agent online as much as possible
+                                                                                                                           
+                              Node Properties -> Environment Variables -> List of variables -> Name = java_home ; value = /usr/lib/jvm/java-17-openjdk-amd64/bin/java (<--its from step-2) -> save
+
+
+4)
+Manage Jenkins -> Security -> Agents -> Tick on "Fixed" & type "50000"
+
+In Terminal : 
+# sudo ufw allow 50000/tcp
+
+5)
+Dashboard -> Manage Jenkins -> Nodes -> agent2 -> There will be 2 commands in that tab , run those commands in terminal one by one
+
+6)
+Dashboard -> New Item -> Name = Master_Slave_Jenkins_demo -> Freestyle Project -> General -> Tick " Restrict where this project can be run" & Label Expression = agent2
+                                                                                  Buils steps -> Execute shell -> echo " Hello welcom to MASTER SLAVE ARCHITECTURE in jenkins " 
+                                                                                  Click on Build-Now, Console Output
+
+
+7)
+Dashboard -> Manage Jenkins -> Nodes -> agent2 (see if their is a green tick beside agent2 )
+
+
