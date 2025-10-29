@@ -1,4 +1,4 @@
-Aim : To install and configure Jenkins to test and deploy an application with Maven.
+Aim : To install Jenkins and configure parallel jobs for building pipeline.
 
 { ##First Install jenkins if not there in system 
 
