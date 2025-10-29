@@ -1,0 +1,28 @@
+Aim : To perform continuous testing of web application using Selenium
+
+1)
+Launch Mozilla Firefox browser -> Open "https://addons.mozilla.org/en-us/firefox/addon/selenium-ide/" -> Click on "Add to Firefox" button -> click "Add" button -> Restart you Firefox browser ----
+                                                                                                                                                                                                  |
+                                                                                            PROJECT NAME = selenium_demo <- Click "Create a new project" <- From extensions open "seleneim IDE"<--|
+
+                                               OR
+                                               
+Open Firefox > Go to the Add-ons Page > Search selenium-ide > Add to Firefox > Launch Selenium IDE
+
+2)
+Rename the Test (To -> seldevops_test ) -> Start Recording -> Go to your Firefox browser and open URL : www.google.com -> set your projects based URL : www.google.com -> Start Recording -> 
+     then continuation of above line
+     -> It will redirect you to the Google search engine page.
+     -> Type "Selenium DevOps Tutorials" in the Google search box & hit enter
+     -> Click on the link "How to Use DevOps in Selenium Testing" provided under the URL "https://www.softwaretestinghelp.com/devops-in-selenium-testing/"
+     -> It will redirect you to "https://www.softwaretestinghelp.com/devops-in-selenium-testing/" tutorial web page. Meanwhile, you will get the notifications of the actions performed by the IDE at the
+        extreme right corner of your web browser.
+     -> The Test Editor box now contains the list of all of your interactions with the browser
+     -> Now, go to IDE and click on the "Stop Recording" button
+
+
+3)
+-> Click on the "Run Current Test" button present on the tool bar menu of the IDE 
+-> Click on the save button present on the extreme right corner of the menu bar
+-> Save the entire test suite as "SelDevOpsdemo.side" Test.
+-> The test suite can be found at the location provided in the above steps. Notice that the test script is saved in .side format in pc 
