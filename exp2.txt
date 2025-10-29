@@ -1,3 +1,5 @@
+Aim : To perform installation of Git and work on local and remote Git repositories.
+
 step-1)
 sudo apt update
 sudo su 
