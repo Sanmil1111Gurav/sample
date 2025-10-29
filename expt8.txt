@@ -1,0 +1,44 @@
+Aim : To demonstrate container lifecycle using various docker commands.
+
+1)
+sudo su
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+ls
+cat get-docker.sh
+docker --version
+docker -v
+docker version
+
+docker login
+docker run -it ubuntu bash
+exit
+docker images
+docker pull ubuntu
+docker ps
+docker ps -a
+docker run -it ubuntu bash
+exit
+docker run -it ubuntu bash
+ls
+exit
+docker rm 3e0  ( ----> 3e0 is the starting 3 characters of CONTAINER ID from "docker ps -a" command )
+docker ps -a
+docker images
+docker rmi bb9 ( ----> bbp is the starting 3 characters of IMAGE ID from "docker images" command )
+docker images
+
+
+2)
+docker pull mysql
+docker images
+docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=password -d mysql
+docker exec -it test-mysql bash
+ mysql -u root -p ---->enter the password:password --> do only if needed
+mysql> SELECT 'hello-world!!!'
+mysql> shoq databases;
+mysql> use mysql
+mysql> SELECT DATABASE();
+mysql> SELECT TABLES;
+mysql> DESCRIBE db;
+mysql> SELECT NOW();
