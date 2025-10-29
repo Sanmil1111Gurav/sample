@@ -1,0 +1,53 @@
+step-1)
+sudo apt update
+sudo su 
+# sudo apt update
+# apt install git    // sudo apt-get install git
+# git --version
+
+step-2) Customize and configure your Git Account:
+
+# git config --global user.name "your_username"
+# git config --global user.email "your_email@example.com@gmail.com"
+# git config --list
+
+step-3) 
+To Integrate Git account with Github:
+Goto www.github.com
+Sign-in to your account
+Create a Repository -> Repo name= , Description = Setting up Git , Public, click Add readme file and create Repo
+
+step-4)
+# mkdir workspace
+# cd workspace/
+# git init
+# git clone <Your repo URL PASTE HERE>
+# ls
+# cd <Your REPO NAME>/  
+# ls ----> output will be: README.md
+# cat README.md
+
+# touch hello.py
+# ls ----> output will be: hello.py , README.md
+# gedit hello.py ----> write simple code ----> print("Hello")
+
+step-5)
+# git status  ---->Displayed as red its ok
+# git add hello.py
+# git status  ---->Displayed as green done
+
+# git commit -m "First Python File"
+# git status
+
+step-6)
+Go to your GitHub account. Navigate to: Settings -> Developer settings -> Personal access tokens -> Tokens (classic).
+Click "Generate new token (classic)" and check repo option and click Generate Token and copy paste it somewhere
+
+# git remote set-url origin https://<YOUR_TOKEN>@github.com/<YOUR_USERNAME>/<Your REPO NAME>
+# git push origin main
+
+step-7)
+# git log
+# git show
+# git diff <Your 2nd commit id > <Your 1st commit id> ----> take the commit id from the git log output
+# git revert <Your 2nd commit id > ----> #### EDITOR WILL OPEN JUST SAVE AND CLOSE IT 
