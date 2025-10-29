@@ -1,0 +1,54 @@
+Aim : To understand and perform version control system / source code management using Git.
+
+sudo apt update
+sudo su 
+
+{
+
+    # sudo apt update
+    # apt install git    // sudo apt-get install git
+    # git --version
+    # git config --global user.name "your_username"
+    # git config --global user.email "your_email@example.com@gmail.com"
+    # git config --list
+    
+    To Integrate Git account with Github:
+    Goto www.github.com
+    Sign-in to your account
+    Create a Repository -> Repo name= , Description = Setting up Git , Public, click Add readme file and create Repo
+    
+}
+
+# mkdir workspace
+# cd workspace/
+# ls ----> e.g. output hello_test
+# cd hello_test/
+# git branch 
+# git branch APSIT
+# git branch  ----> * mark will be on main/master 
+# git checkout APSIT 
+# git branch ----> * mark will be on APSIT
+
+# echo " This text was added originally while in the APSIT branch " >> hello.py
+# cat hello.py
+# gedit hellpy ----> write this code on file ----> print("Hello Devops")
+# cat hello.py
+# git status
+# git add hello.py
+# git status
+
+# git commit -m "Added a line in APSIT branch"
+# git log
+# git checkout main
+# git branch
+# git merge APSIT
+# cat hello.py
+# git push -u origin main ----> if it didnt work / it works with error ----> # git push -u origin main --force
+
+# git remote set-url origin https://<YOUR_TOKEN>@github.com/<YOUR_USERNAME>/<Your REPO NAME>
+{
+  Go to your GitHub account. Navigate to: Settings -> Developer settings -> Personal access tokens -> Tokens (classic).
+  Click "Generate new token (classic)" and check repo option and click Generate Token and copy paste it somewhere
+}
+
+# git push -u origin main ----> # Goto Github Account and see the update
