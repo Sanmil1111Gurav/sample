@@ -1,0 +1,50 @@
+Aim : To install and configure Jenkins to test and deploy an application with Maven.
+
+{ ##First Install jenkins if not there in system 
+
+    sudo su root
+    # apt-get update
+    # apt-get install openjdk-17-jdk
+    # java -version
+    
+    # curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \ 
+    > /usr/share/keyrings/jenkins-keyring.asc 
+    > /dev/null
+    
+    # echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    > https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    > /etc/apt/sources.list.d/jenkins.list > /dev/null
+    
+    # sudo apt-get update
+    # jenkins --version
+    # sudo ufw status
+    # sudo ufw enable
+    # sudo ufw status 
+    ----> Open the jenkins through website ----> http://localhost:8080
+    # sudo cat /var/lib/jenkins/secrets/initialAdminPassword ----> use this command if jenkins asks for authentication
+}
+
+{ ##Install "Build Pipeline" Plugin
+
+    Manage Jenkins -> Plugins -> Available Plugins -> In the Search bar, type: Build Pipeline -> Install the Plugin ( Tick the checkbox next to Build Pipeline Plugin , Click Install without restart )
+}
+
+1)	Create three new item 1. Test 2. Staging 3. Production 
+2)	In all item Build Step -> Execute Shell
+      Type:
+      sleep 10
+      echo "This is test phase" ------>For Test Item similarly change the text for other 2 tests i.e only change test to staging , production
+
+Part I: Demo on concept of  continuous delivery :
+3)	Go to : test -> configure -> Post-build Actions -> Build other projects -> staging
+4)  Go to : staging -> configure -> Post-build Actions -> Build other projects -> production
+
+Goto Dashboard, Now you need to click on plus icon ( it will be their in something like menu bar ), New view:- Name: continuous delivery , And type: "build pipeline view" and click on create.
+and scroll down and look for your -> select initial job : test
+
+5)	test -> job -> configure -> Post-build Actions -> Build other projects -> staging,QA-test -> tick "Trigger only if build is stable" ->save
+6)	Run the Build Pipeline View
+
+
+
+
