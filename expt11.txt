@@ -1,0 +1,26 @@
+Aim : To deploy a web application by provisioning LAMP Stack using ansible playbook.
+
+1)
+PERFORM ALL THE STEPS OF EXPT-10
+
+2)
+
+Master:
+.ssh # cs ~
+# ls ----> output : snap
+# mkdir ansible-lab
+# cd ansible-lab/
+# git clone https://github.com/Sanmil1111Gurav/ansiblecodes.git ----> Output : Cloning into 'ansible-codes'...
+----> open that file & instead of "Welcome to Ansible playbook session ny prof. sujata oak" change it to "Welcome to Ansible playbook by Sanmil"
+# ls ----> output : ansible-codes
+# cd ansible-codes/
+# ls ----> output will shows 10-15 files .php , .yml , etc
+# nano lampstack_1.yml ----> fiile will open just save it
+# ansible-playbook lampstack_1.yml
+
+Slave:
+.ssh # cs ~
+# mysql
+# php --version
+# service apache2 status
+----> # Once apache service status is active. Copy IPv4 address of ansible-slave machine in browser and you can see the deployment of index.html page.
