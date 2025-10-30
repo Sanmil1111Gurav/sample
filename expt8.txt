@@ -42,3 +42,8 @@ mysql> SELECT DATABASE();
 mysql> SELECT TABLES;
 mysql> DESCRIBE db;
 mysql> SELECT NOW();
+
+
+
+Conclusion: In this experiments student have learnt how to deal with containerization technology using various
+docker commands.
