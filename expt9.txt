@@ -1,0 +1,90 @@
+Aim : To build an image for a sample web application from a docker file using various docker file instructions.
+
+docker pull nginx
+docker images
+docker run --name webserver1 f6b (start 3 letter of nginx image)
+docker ps -a
+docker rm f96 (starting 3 letter on container is of nginx imag)
+docker run -it -p 3031:80 --name server1 nginx:latest
+if the above command not execute then execte
+sudo docker run -it --name my-web-server nginx:latest bash
+Inside bash  (root@c9b494f1a40d)
+cd /usr/share/nginx/html/
+mv index.html index.html_backup
+apt update
+apt install nano
+nano index.html
+
+PASTE THIS CODE:
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style>
+Body {
+ font-family: Calibri, Helvetica, sans-serif;
+ background-color: pink;
+}
+button {
+ background-color: #4CAF50;
+ width: 100%;
+ color: orange;
+ padding: 15px;
+ margin: 10px 0px;
+ border: none;
+ cursor: pointer;
+ }
+form {
+ border: 3px solid #f1f1f1;
+ }
+input[type=text], input[type=password] {
+ width: 100%;
+ margin: 8px 0;
+ padding: 12px 20px;
+ display: inline-block;
+ border: 2px solid green;
+ box-sizing: border-box;
+ }
+button:hover {
+ opacity: 0.7;
+}
+ .cancelbtn {
+ width: auto;
+ padding: 10px 18px;
+ margin: 10px 5px;
+ }
+.container {
+ padding: 25px;
+ background-color: lightblue;
+ }
+</style>
+</head>
+<body>
+ <center> <h1> <b>Student Login Form Designed by Sujata Oak</b> </h1> </center>
+ <form>
+ <div class="container">
+<label>Username : </label>
+ <input type="text" placeholder="Enter Username" name="username" required>
+ <label>Password : </label>
+ <input type="password" placeholder="Enter Password" name="password" required>
+ <button type="submit">Login</button>
+ <input type="checkbox" checked="checked"> Remember me
+ <button type="button" class="cancelbtn"> Cancel</button>
+ Forgot <a href="#"> password? </a>
+ </div>
+ </form>
+</body>
+</html>
+
+THEN.................
+Browser : http://localhost:3031
+If 1 terminal 
+docker stop 59
+
+
+
+CONCLUSION :  In the experiment, we used various docker commands to pull images that were already built, also
+we created our own images by using docker file instructions for a sample web application and atlast we have
+pushed the image to docker hub account for others to use the repository.
+5 (Replace 595 with your container's ID)
