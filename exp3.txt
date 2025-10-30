@@ -52,3 +52,12 @@ sudo su
 }
 
 # git push -u origin main ----> # Goto Github Account and see the update
+
+
+Conclusion:
+In this experiment, we understood the use case of Version Control System in branching
+Compiled By Prof. Sujata Oak
+and merging, its benefits in real time scenario which provides a application of branching
+the changes when people are in working in a collaborating environment. Different
+commands were used for the same such as checkout, branch and merge for displaying the
+changes between the initial and latter texts.
