@@ -36,3 +36,5 @@ Dashboard -> New Item -> Name = Master_Slave_Jenkins_demo -> Freestyle Project -
 Dashboard -> Manage Jenkins -> Nodes -> agent2 (see if their is a green tick beside agent2 )
 
 
+Conclusion: This way we could connect with many machines as Slave nodes with different
+environment and execute our Jenkins jobs.
