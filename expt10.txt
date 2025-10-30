@@ -1,0 +1,79 @@
+Aim : To install Ansible on top of AWS instance, setup Ansible host environment and configure SSH access between Ansible master-slave.
+
+1)
+delete all neteork security groups  except'default' -> create 2 instances i.e. master & slave -> in network  security groups changes the inbound rules of the newly created group and all rule manually----
+                                                                                                                                                                          connect both master & slave ----|
+                                                                                                                                                                          
+2)
+
+Master:
+sudo su
+# ping <IP_address_of_slave>
+
+Slave:
+sudo su
+# ping <IP_address_of_master>
+
+Master:
+# clear
+sudo su 
+# apt update -y 
+# apt-add-repository ppa:ansible/ansible 
+# apt update -y
+# apt-get install ansible -y 
+# ansible --version 
+
+Slave:
+sudo su
+# apt update -y 
+
+Master:
+# nano /etc/ansible/hosts -> [client 1]           ----> add this line in nanao below #192.168.1.110
+                            <IP_address_of_slave>
+                            
+# ssh-keygen -t rsa ----> presss enter dont type anything inside it , till u see RSA box
+# cd /root/.ssh/ 
+# ls ----> its iutput will have authorized keys , id_rsa, id_rsa.pub similar files/content
+# cat id_rsa.pub
+----> ## the above commands output --> COPY THE KEY INSIDE SLAVE
+
+Slave:
+# cd /root/.ssh/ 
+# ls ----> its output will show "authorized_keys"
+# nano authorized_keys 
+----> # PASTE THE KEY INSIDE THIS FILE THAT WAS COPIED FROM MASTER ----> save
+# nano /etc/ssh/sshd_config  -> PermitRootLogin yes ----> add this line in nano below #PermitRootLogin prohibit-password 
+
+Master:
+# ansible -m ping all 
+# ansible client_1 -m setup 
+
+Slave:
+# git --version 
+# apt remove git 
+# git --version 
+
+Master:
+# ansible client_1 -m apt -a "name=git state=present" --become 
+
+Slave:
+# git --version 
+
+Master:
+# nano test.txt ----> # it will be empty ----> save the empty file
+# ansible client_1 -m apt -a "name=nano state=absent" --become 
+
+Slave:
+# nano test.txt  ----> output will be : no such file or directory
+
+Master:
+# ansible client_1 -m apt -a "name=nano state=present" --become 
+
+Slave:
+# nano test.txt  ----> now in output the file will open 
+
+
+
+
+
+
