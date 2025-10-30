@@ -46,5 +46,9 @@ and scroll down and look for your -> select initial job : test
 6)	Run the Build Pipeline View
 
 
-
+Conclusion:
+In this experiment we successfully learned installing jenkins and setting up parallel jobs in
+a pipeline which significantly improves CI/CD efficiency. This approach helps in faster
+feedback cycles, quicker releases, and better utilization of resources. With proper pipeline
+configuration, teams can ensure high productivity while maintaining quality.
 
