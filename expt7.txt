@@ -26,3 +26,6 @@ Rename the Test (To -> seldevops_test ) -> Start Recording -> Go to your Firefox
 -> Click on the save button present on the extreme right corner of the menu bar
 -> Save the entire test suite as "SelDevOpsdemo.side" Test.
 -> The test suite can be found at the location provided in the above steps. Notice that the test script is saved in .side format in pc 
+
+
+Conclusion: This experiment demonstrated how to automate a test case in Selenium ide.
