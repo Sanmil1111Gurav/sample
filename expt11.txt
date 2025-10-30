@@ -11,7 +11,6 @@ Master:
 # mkdir ansible-lab
 # cd ansible-lab/
 # git clone https://github.com/Sanmil1111Gurav/ansiblecodes.git ----> Output : Cloning into 'ansible-codes'...
-----> open that file in github i.e index.html & instead of "Welcome to Ansible playbook session ny prof. sujata oak" change it to "Welcome to Ansible playbook by Sanmil" 
 # ls ----> output : ansible-codes
 # cd ansible-codes/
 # ls ----> output will shows 10-15 files .php , .yml , etc
