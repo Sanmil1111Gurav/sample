@@ -20,3 +20,9 @@ Go to : Manage Jenkins -> Tools -> JDK installations -> Add JDK
 4)	CICD Pipeline -> Configure -> Environment -> Add build Step -> Invoke top-level Maven targets -> Maven version -> Mavenlatest -> Goals -> clean compile package
 
 5)	Click on apply -> Save -> Build Now -> Console output
+
+
+Conclusion: By implementing Jenkins pipelines for Tomcat deployment, software teams
+achieve full automation of the build, test, and deployment lifecycle of web applications.
+This experiment demonstrates the practical application of CI/CD concepts in a real-world
+scenario.
