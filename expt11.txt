@@ -24,3 +24,6 @@ Slave:
 # php --version
 # service apache2 status
 ----> # Once apache service status is active. Copy IPv4 address of ansible-slave machine in browser and you can see the deployment of index.html page.
+
+
+Conclusion: In the experiment, successfully implemented provisioning lamp stack on ubuntu machine using ansible playbook.
