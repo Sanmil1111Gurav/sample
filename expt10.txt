@@ -73,6 +73,7 @@ Slave:
 # nano test.txt  ----> now in output the file will open 
 
 
+Conclusion: In the experiment, we successfully installed Ansible on top of AWS Instance. Also,configured SSH access to Ansible slave and setup ansible host and tested connection. 
 
 
 
